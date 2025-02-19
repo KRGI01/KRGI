@@ -1,34 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GIF & Video Showcase</title>
-  <!-- Ensure this path is correct -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>KRGI</h1>
-    
-    <div class="media-section">
-      <div class="gif-section">
-        <img src="KRCE-Web-01.gif" alt="First GIF" class="gif large-gif" />
-      </div>
-      
-      <div class="gif-section">
-        <img src="KRCE-Web-02.gif" alt="Second GIF" class="gif tall-gif" />
-      </div>
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      <div class="video-section">
-        <h2>CAMPUS TOUR</h2>
-        <video controls class="media-item">
-          <!-- Renamed file to remove spaces -->
-          <source src="KRCE_GROUP_20_SEC_V2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Main container with fixed max width */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media section layout */
+.media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* GIF styling */
+.gif {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.large-gif {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.tall-gif {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Video styling */
+.media-item {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+}
