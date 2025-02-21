@@ -66,36 +66,44 @@ h2 {
   display: block;
 }
 
-/* Photo Gallery */
+/* Photo Gallery Slider */
 .photo-gallery {
   margin-top: 40px;
 }
 
-.photo-gallery h2 {
-  margin-bottom: 20px;
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Grid layout: 3 photos per row */
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 0 20px;
-}
-
-/* Photo styling */
-.photo {
+.slide {
   width: 100%;
-  height: auto;
   border-radius: 4px;
-  opacity: 0; /* Start hidden for fade-in effect */
+  cursor: pointer;
   transition: opacity 1s ease-in-out;
-  cursor: pointer; /* Indicates clickable */
 }
 
-/* Fade-in effect */
-.photo.fade-in {
-  opacity: 1;
+/* Arrow navigation */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow.prev {
+  left: 10px;
+}
+
+.arrow.next {
+  right: 10px;
 }
 
 /* Lightbox Modal */
